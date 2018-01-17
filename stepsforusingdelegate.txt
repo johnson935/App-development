@@ -1,0 +1,18 @@
+This document sets out to explain how to use protocols and delegates to pass data back from view controllers
+
+1. Define protocol and its functions
+
+2. set the desired view controller's class as a delegate of the protocol next to the UIviewcontroller class.
+
+3. Define a new variable for the delegate as the protocol name as an optional i.e
+protocol example{}
+var delegate : example?
+
+4. override the prepare function for the segue, and if the segue.identifier == "nameofsegue" 
+by creating a segue we create a new object
+create a new constant VC and set it to segue.destination as! the other view controller, and set the delegate property to self i.e the current view controller
+
+5. call the delegate methods when the user presses a button 
+and create a new constant for the textfield or data and call the delegate property delegate?.method(). delegate? means if there are no classes assigned to be the delegate then the function dose not get triggered.
+
+6.  
